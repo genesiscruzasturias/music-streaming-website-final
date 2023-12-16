@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow-x: hidden; /* Disable horizontal scroll for the entire page */
+}
+
+#left-sidebar,
+#right-sidebar {
+    height: auto;
+    width: 280px;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#left-sidebar a,
+#right-sidebar a {
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+#content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Disable horizontal scroll for the content */
+}
+
+#carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* Change to 'auto' or remove this line */
+    margin-top: 3rem;
+}
+
+#carouselExampleSlidesOnly {
+    width: 70%; /* Adjust as needed */
+}
+
+.additional-content {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 300px;
+    white-space: nowrap;
+
+    overflow-x: auto; /* Enable horizontal scroll for the container */
+    overflow-y: hidden; /* Disable vertical scroll for the container */
+}
+.insert-new-releases,
+.recommended-artists,
+.insert-get-tracks {
+    width: 100%;
+    height: auto; /* Change to 'auto' or remove */
+    box-sizing: border-box;
+    margin: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 200px;
+    height: auto; /* Change to 'auto' */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.truncated-text {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Hide the button by default */
+.read-more-btn {
+    display: none;
+}
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+#bottom-navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000; /* Adjust as needed */
+}
+.cruzzn-img{
+    width: 200px;
+    height: 200px;
+    margin-top: -50px;
+}
+
+.search-form {
+    display: flex;
+    max-width: 400px; /* Adjust the max-width as needed */
+    margin: 0 auto;
+}
+
+.search-input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-button {
+    background-color: #4285f4; /* Change to your desired button color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
