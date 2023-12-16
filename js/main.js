@@ -1,11 +1,16 @@
+// import { apiKey } from "./keys";
+
+// import("./keys.js")
+
 console.log("Hi");
+const apiKey = window.apiKey;
 // Peso Pluma id = 12GqGscKJx3aE4t07u7eVZ
 async function fetchArtists() {
     const url = 'https://spotify23.p.rapidapi.com/recommendations/?limit=20&seed_tracks=0c6xIDDpzE81m2q797ordA&seed_artists=4NHQUGzhtTLFvgF5SZesLK&seed_genres=classical%2Ccountry';
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '0e2b2f4503msh46214f077ea0a32p1da25cjsnff0243e94fdf',
+            'X-RapidAPI-Key': apiKey,
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
         }
     };
@@ -34,14 +39,14 @@ async function fetchArtists() {
     }
 
 }
-// fetchArtists();
+fetchArtists();
 //
 async function differentArtists() {
     const url = 'https://spotify23.p.rapidapi.com/recommendations/?limit=20&seed_artists=12GqGscKJx3aE4t07u7eVZ%2C&seed_genres=mexican';
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '0e2b2f4503msh46214f077ea0a32p1da25cjsnff0243e94fdf',
+            'X-RapidAPI-Key': apiKey,
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
         }
     };
@@ -70,14 +75,14 @@ async function differentArtists() {
     }
 
 }
-// differentArtists();
+differentArtists();
 
 async function getTracks() {
     const url = 'https://spotify23.p.rapidapi.com/tracks/?ids=4WNcduiCmDNfmTEz7JvmLv';
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': '0e2b2f4503msh46214f077ea0a32p1da25cjsnff0243e94fdf',
+            'X-RapidAPI-Key': apiKey,
             'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
         }
     };
@@ -106,7 +111,7 @@ async function getTracks() {
     }
 }
 
-// getTracks();
+getTracks();
 // async function getGenres() {
 //     const url = 'https://spotify23.p.rapidapi.com/genre_view/?id=0JQ5DAqbMKFEC4WFtoNRpw&content_limit=10&limit=10';
 //     const options = {
